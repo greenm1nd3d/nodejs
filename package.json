@@ -1,0 +1,21 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "Workflow app written in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "workflow"
+  ],
+  "author": "Fred Reyes",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "^2.5.7",
+    "express": "*",
+    "express-validator": "^2.20.8",
+    "mongojs": "^2.2.33"
+  }
+}

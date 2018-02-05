@@ -1,0 +1,35 @@
+<% include partials/header %>
+<body>
+<h1><%= title %></h1>
+<h2>Add User</h2>
+
+<% if (errors) { %>
+  <ul>
+    <% errors.forEach(function(error) { %>
+      <li><%= error.msg %></li>
+    <% }) %>
+  </ul>
+<% } %>
+
+<form method="POST" action="/users/add">
+  <label>First Name</label><br>
+  <input type="text" name="first_name">
+  <br>
+  <label>Last Name</label><br>
+  <input type="text" name="last_name">
+  <br>
+  <label>Email Address</label><br>
+  <input type="text" name="email_address">
+  <br>
+  <input type="submit" value="Submit">
+</form>
+
+<ul>
+<% users.forEach(function(user) { %>
+  <!--<li><%= user.first_name %> <%= user.last_name %> <a href="http://localhost:3000/users/delete/<%= user._id %>" data-id="<%= user._id %>">Delete</a></li>-->
+  <li><%= user.first_name %> <%= user.last_name %> <a href="javascript:;" class="delete-user" data-id="<%= user._id %>">Delete</a></li>
+<% }) %>
+</ul>
+
+</body>
+<% include partials/footer %>
